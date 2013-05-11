@@ -1,1 +1,4 @@
 * text=auto !eol
+/deploy.bat -text
+/install.bat -text
+/pom.xml -text
