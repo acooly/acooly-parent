@@ -1,74 +1,281 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.acooly</groupId>
+
+	<groupId>com.acooly</groupId>
 	<artifactId>acooly-parent</artifactId>
+	<version>2.0.0</version>
 	<packaging>pom</packaging>
+
 	<name>acooly-parent</name>
-	<version>1.0.0</version>
-	
-	<description>For compatibility with older projects before 2013.</description>
-	
-	<organization>
-		<name>A cooly</name>
-		<url>http://www.acooly.com</url>
-	</organization>
+	<description>acooly所有J2EE工程的Meven父配置, 统一：1.编译环境 2.插件配置 3.本地仓库配置 4.报告配置 。
+注意：这里不提供统一的基础依赖JAR包定义。JAR包的定义下沉到acooly-framework和具体的项目中自己定义。</description>
+	<url>http://www.acooly.com/svn/framework/acooly-parent</url>
+
+	<!-- 设定除中央仓库 -->
+	<repositories>
+		<!-- 公司Nexus私服 -->
+		<repository>
+			<id>central</id>
+			<name>Central Repository</name>
+			<url>http://www.acooly.com/nexus/content/repositories/releases/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<properties>
+		<!-- 编译属性 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jdk.version>1.6</jdk.version>
+		<maven.site.version>3.2</maven.site.version>
+		<project.info.reports.version>2.6</project.info.reports.version>
+		<maven.checkstyle.version>2.9.1</maven.checkstyle.version>
+		<maven.jxr.version>2.3</maven.jxr.version>
+		<maven_javadoc_version>2.9</maven_javadoc_version>
+		<maven_surefire_report_version>2.12</maven_surefire_report_version>
+		<maven_cobertura_version>2.5.1</maven_cobertura_version>
+		<maven_findbugs_version>2.5.2</maven_findbugs_version>
+		<maven_pmd_version>2.7</maven_pmd_version>
+		<maven_jetty_version>7.1.6.v20100715</maven_jetty_version>
+	</properties>
+
+
+	<dependencies>
+		<!-- J2EE basic dependencies -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+	</dependencies>
+
 
 	<build>
+		<!-- 插件默认配置, 子项目可以覆盖 -->
 		<plugins>
+			<!-- compiler插件, 设定JDK版本 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-					<encoding>UTF-8</encoding>
+					<encoding>${project.build.sourceEncoding>}</encoding>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+					<showWarnings>true</showWarnings>
 				</configuration>
 			</plugin>
+
+			<!-- resource插件 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.5.1</version>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
 			</plugin>
+
+			<!-- jar打包相关插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<!-- 要将源码发布到仓库，需要加入这个插件 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<configuration>
+					<attach>true</attach>
+				</configuration>
 				<executions>
 					<execution>
 						<id>attach-sources</id>
+						<phase>package</phase>
 						<goals>
 							<goal>jar</goal>
 						</goals>
 					</execution>
 				</executions>
 			</plugin>
+
+			<!-- enforcer插件, 规定必须遵循的规则 <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-enforcer-plugin</artifactId> <version>1.1.1</version> <executions> <execution> <id>enforce-banned-dependencies</id> 
+				<goals> <goal>enforce</goal> </goals> <configuration> <rules> <requireJavaVersion> <version>1.6</version> </requireJavaVersion> </rules> <fail>true</fail> </configuration> </execution> </executions> </plugin> -->
+
+			<!-- eclipse插件, 设定下载依赖包的source code -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>false</downloadJavadocs>
+					<!-- 增加设置项目encoding的文件 -->
+					<additionalConfig>
+						<file>
+							<name>.settings/org.eclipse.core.resources.prefs</name>
+							<content>
+								<![CDATA[eclipse.preferences.version=1${line.separator}encoding/<project>=${project.build.sourceEncoding}${line.separator}]]>
+							</content>
+						</file>
+					</additionalConfig>
+				</configuration>
+			</plugin>
+			<!-- dependency相关插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.6</version>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+				<version>1.3.1</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>${maven_jetty_version}</version>
+				<configuration>
+					<stopKey>stop</stopKey>
+					<stopPort>5599</stopPort>
+					<scanIntervalSeconds>0</scanIntervalSeconds>
+					<connectors>
+						<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+							<port>8080</port>
+							<maxIdleTime>60000</maxIdleTime>
+						</connector>
+					</connectors>
+					<webAppConfig>
+						<contextPath>/</contextPath>
+						<defaultsDescriptor>jetty/webdefault_7.1.6.v20100715.xml</defaultsDescriptor>
+					</webAppConfig>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>com.acooly</groupId>
+						<artifactId>acooly-parent-resources</artifactId>
+						<version>1.1.0</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+			<!-- Site 插件 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
+				<version>${maven.site.version}</version>
 				<configuration>
 					<locales>zh_CN</locales>
-					<inputEncoding>UTF-8</inputEncoding>
 					<outputEncoding>UTF-8</outputEncoding>
 				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.wagon</groupId>
+						<artifactId>wagon-webdav-jackrabbit</artifactId>
+						<version>2.2</version>
+					</dependency>
+					<dependency>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-nop</artifactId>
+						<version>1.5.11</version>
+					</dependency>
+					<dependency><!-- add support for ssh/scp -->
+						<groupId>org.apache.maven.wagon</groupId>
+						<artifactId>wagon-ssh</artifactId>
+						<version>1.0</version>
+					</dependency>
+				</dependencies>
 			</plugin>
-		</plugins>
-	</build>
-	<reporting>
-		<plugins>
-			<!-- project info -->
+
+			<!-- checkstyle 插件 依赖的资源文件在acooly-parent-resources打成jar包 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>
-					maven-project-info-reports-plugin
-				</artifactId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>${maven.checkstyle.version}</version>
+				<dependencies>
+					<dependency>
+						<groupId>com.acooly</groupId>
+						<artifactId>acooly-parent-resources</artifactId>
+						<version>1.1.0</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+			<!-- 测试插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.12</version>
+				<executions>
+					<execution>
+						<id>run-integration-test</id>
+						<phase>integration-test</phase>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<configuration>
+							<skip>false</skip>
+							<includes>
+								<include>**/*IT.java</include>
+							</includes>
+						</configuration>
+					</execution>
+					<execution>
+						<id>run-test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<configuration>
+							<skip>false</skip>
+							<includes>
+								<include>**/*Tests.java</include>
+							</includes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+	</build>
+
+
+
+	<!-- Site 报告配置 -->
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>${project.info.reports.version}</version>
 				<reportSets>
 					<reportSet>
 						<reports>
 							<report>index</report>
-							<report>dependencies</report>
 							<report>project-team</report>
+							<report>mailing-list</report>
+							<report>cim</report>
 							<report>issue-tracking</report>
 							<report>license</report>
 							<report>scm</report>
@@ -76,59 +283,121 @@
 					</reportSet>
 				</reportSets>
 			</plugin>
-			<!-- test -->
+
+
+			<!-- checkstyle -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>${maven.checkstyle.version}</version>
 				<configuration>
-					<testFailureIgnore>true</testFailureIgnore>
-					<excludes>
-						<exclude>**/Mock*.java</exclude>
-					</excludes>
+					<configLocation>checkstyle/acooly-checkstyle-sun-based.xml</configLocation>
+					<excludes>**/*Test*.java</excludes>
 				</configuration>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>checkstyle</report>
+						</reports>
+					</reportSet>
+				</reportSets>
 			</plugin>
-			<!-- test report -->
+			<!-- 单元测试报告 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>${maven_surefire_report_version}</version>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>report-only</report>
+						</reports>
+					</reportSet>
+				</reportSets>
 			</plugin>
-			<!--Generate Java Doc -->
+
+			<!-- 单元测试覆盖率统计 -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>${maven_cobertura_version}</version>
+				<configuration>
+					<formats>
+						<format>xml</format>
+						<format>html</format>
+					</formats>
+				</configuration>
+			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>${maven_javadoc_version}</version>
 				<configuration>
-					<charset>UTF-8</charset>
-					<encoding>UTF-8</encoding>
+					<source>${jdk.version}</source>
+					<charset>${project.build.sourceEncoding}</charset>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<docencoding>${project.build.sourceEncoding}</docencoding>
+					<aggregate>true</aggregate>
+				</configuration>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>javadoc</report>
+							<report>test-javadoc</report>
+						</reports>
+					</reportSet>
+					<reportSet>
+						<id>aggregate</id><!-- aggregate reportSet, for pom with modules -->
+						<inherited>false</inherited><!-- don't run aggregate in child modules -->
+						<reports>
+							<report>aggregate</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+
+			<!-- 生成java代码交叉引用和源代码的html格式 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+				<version>${maven.jxr.version}</version>
+				<configuration>
+					<aggregate>true</aggregate>
+					<inputEncoding>${project.build.sourceEncoding}</inputEncoding>
+					<outputEncoding>${project.build.sourceEncoding}</outputEncoding>
 				</configuration>
 			</plugin>
-			<!-- Find Bugs -->
+			<!-- FindBugs 检查和报告 -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
-			</plugin>
-			<!--change logs in cvs -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-changelog-plugin</artifactId>
+				<version>${maven_findbugs_version}</version>
+				<configuration>
+					<threshold>medium</threshold>
+					<effort>Default</effort>
+					<findbugsXmlOutput>true</findbugsXmlOutput>
+				</configuration>
 			</plugin>
 		</plugins>
 	</reporting>
 
-	<!-- 源代码控制 -->
-	<scm>
-		<connection>scm:svn:http://www.acooly.com/svn/</connection>
-		<developerConnection>scm:svn:http://www.acooly.com/svn/</developerConnection>
-		<url>http://www.acooly.org/com/</url>
-	</scm>
-	
+	<organization>
+		<name>苦力 acooly</name>
+		<url>http://www.acooly.com</url>
+	</organization>
+
 	<!-- 运行Deploy自动 发布到仓库 -->
 	<distributionManagement>
 		<!-- use the following if you're not using a snapshot version. -->
 		<repository>
 			<id>nexus-releases</id>
-			<name>Feinno Internal Releases</name>
+			<name>acooly Internal Releases</name>
 			<url>http://www.acooly.com/nexus/content/repositories/releases/</url>
 		</repository>
-	</distributionManagement>	
+	</distributionManagement>
 
+	<modules>
+		<module>acooly-parent-resources</module>
+	</modules>
 </project>
