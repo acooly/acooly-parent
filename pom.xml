@@ -11,16 +11,6 @@
 注意：这里不提供统一的基础依赖JAR包定义。JAR包的定义下沉到acooly-framework和具体的项目中自己定义。</description>
 	<url>http://www.acooly.com/svn/framework/acooly-parent</url>
 
-	<!-- 设定除中央仓库 -->
-	<repositories>
-		<!-- 公司Nexus私服 -->
-		<repository>
-			<id>Acooly</id>
-			<name>acooly Repository</name>
-			<url>http://www.acooly.com/nexus/content/repositories/releases/</url>
-		</repository>
-	</repositories>
-
 	<properties>
 		<!-- 编译属性 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -96,7 +86,7 @@
 					</archive>
 				</configuration>
 			</plugin>
-			<!-- 要将源码发布到仓库，需要加入这个插件 
+			<!-- 要将源码发布到仓库，需要加入这个插件 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
@@ -114,7 +104,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			-->
+			
 
 			<!-- enforcer插件, 规定必须遵循的规则 <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-enforcer-plugin</artifactId> <version>1.1.1</version> <executions> <execution> <id>enforce-banned-dependencies</id> 
 				<goals> <goal>enforce</goal> </goals> <configuration> <rules> <requireJavaVersion> <version>1.6</version> </requireJavaVersion> </rules> <fail>true</fail> </configuration> </execution> </executions> </plugin> -->
