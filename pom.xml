@@ -381,7 +381,7 @@
 		<repository>
 			<id>nexus-releases</id>
 			<name>acooly Internal Releases</name>
-			<url>http://www.acooly.com/nexus/content/repositories/releases/</url>
+			<url>http://acooly.gicp.net/nexus/content/repositories/releases/</url>
 		</repository>
 	</distributionManagement>
 
