@@ -86,25 +86,8 @@
 					</archive>
 				</configuration>
 			</plugin>
-			<!-- 要将源码发布到仓库，需要加入这个插件 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>2.2.1</version>
-				<configuration>
-					<attach>true</attach>
-				</configuration>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<phase>package</phase>
-						<goals>
-							<goal>jar-no-fork</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			
+			<!-- 要将源码发布到仓库，需要加入这个插件 <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-source-plugin</artifactId> <version>2.2.1</version> <configuration> <attach>true</attach> </configuration> 
+				<executions> <execution> <id>attach-sources</id> <phase>package</phase> <goals> <goal>jar-no-fork</goal> </goals> </execution> </executions> </plugin> -->
 
 			<!-- enforcer插件, 规定必须遵循的规则 <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-enforcer-plugin</artifactId> <version>1.1.1</version> <executions> <execution> <id>enforce-banned-dependencies</id> 
 				<goals> <goal>enforce</goal> </goals> <configuration> <rules> <requireJavaVersion> <version>1.6</version> </requireJavaVersion> </rules> <fail>true</fail> </configuration> </execution> </executions> </plugin> -->
@@ -245,7 +228,6 @@
 				</executions>
 			</plugin>
 		</plugins>
-
 	</build>
 
 
@@ -374,6 +356,20 @@
 		<name>苦力 acooly</name>
 		<url>http://www.acooly.com</url>
 	</organization>
+
+	<developers>
+		<developer>
+			<id>1</id>
+			<name>张浦</name>
+			<email>zpuser@gmail.com</email>
+			<roles>
+				<role>系统架构师</role>
+			</roles>
+			<properties>
+				<mobileNo>13896177630</mobileNo>
+			</properties>
+		</developer>
+	</developers>
 
 	<!-- 运行Deploy自动 发布到仓库 -->
 	<distributionManagement>
