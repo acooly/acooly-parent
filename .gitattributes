@@ -1,6 +1,6 @@
 * text=auto !eol
 acooly-parent-resources/pom.xml -text
-acooly-parent-resources/src/main/resources/checkstyle/feinno-checkstyle-sun-based.xml -text
+acooly-parent-resources/src/main/resources/checkstyle/acooly-checkstyle-sun-based.xml -text
 acooly-parent-resources/src/main/resources/jetty/webdefault_7.1.6.v20100715.xml -text
 /deploy.bat -text
 /install.bat -text
