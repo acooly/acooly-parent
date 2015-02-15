@@ -50,6 +50,7 @@
 		<commons-codec.version>1.8</commons-codec.version>
 		<guava.version>13.0.1</guava.version>
 		<junit.version>4.10</junit.version>
+		<jackson.version>2.1.0</jackson.version>
 		<slf4j.version>1.7.7</slf4j.version>
 		<logback.version>1.1.2</logback.version>
 	</properties>
@@ -420,6 +421,12 @@
 				<groupId>org.freemarker</groupId>
 				<artifactId>freemarker</artifactId>
 				<version>${freemarker.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.jaxrs</groupId>
+				<artifactId>jackson-jaxrs-json-provider</artifactId>
+				<version>${jackson.version}</version>
 			</dependency>
 
 			<!-- XML begin -->
@@ -988,7 +995,7 @@
 		<repository>
 			<id>nexus-releases</id>
 			<name>acooly Internal Releases</name>
-			<url>http://acooly.gicp.net/nexus/content/repositories/releases/</url>
+			<url>http://acooly.wicp.net/nexus/content/repositories/releases/</url>
 		</repository>
 	</distributionManagement>
 
