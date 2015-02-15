@@ -30,7 +30,7 @@
 		<maven_jetty_version>7.1.6.v20100715</maven_jetty_version>
 
 		<!-- acooly插件 -->
-		<acooly.core.version>2.2.4</acooly.core.version>
+		<acooly.core.version>3.0.0</acooly.core.version>
 
 		<!-- 第三方版本 -->
 		<spring.version>3.2.6.RELEASE</spring.version>
