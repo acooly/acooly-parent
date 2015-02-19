@@ -31,10 +31,11 @@
 
 		<!-- acooly插件 -->
 		<acooly.core.version>3.0.0</acooly.core.version>
-
+		<acooly.module.security.version>3.2.0</acooly.module.security.version>
+		<acooly.taglibs.version>1.0.0</acooly.taglibs.version>
 		<!-- 第三方版本 -->
 		<spring.version>3.2.6.RELEASE</spring.version>
-		<spring.data.jpa.version>1.5.1.RELEASE</spring.data.jpa.version>
+		<spring.data.jpa.version>1.5.2.RELEASE</spring.data.jpa.version>
 		<spring.data.commons.version>1.7.1.RELEASE</spring.data.commons.version>
 		<hibernate.version>4.3.4.Final</hibernate.version>
 		<hibernate.validator.version>4.3.1.Final</hibernate.validator.version>
@@ -62,6 +63,16 @@
 				<groupId>com.acooly</groupId>
 				<artifactId>acooly-core</artifactId>
 				<version>${acooly.core.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.acooly</groupId>
+				<artifactId>acooly-module-security</artifactId>
+				<version>${acooly.module.security.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.acooly</groupId>
+				<artifactId>acooly-taglibs</artifactId>
+				<version>${acooly.taglibs.version}</version>
 			</dependency>
 
 			<!--日志 采用slf4j 日志实现为logback -->
