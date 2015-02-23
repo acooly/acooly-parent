@@ -31,9 +31,10 @@
 
 		<!-- acooly插件 -->
 		<acooly.core.version>3.0.0</acooly.core.version>
-		<acooly.taglibs.version>1.0.0</acooly.taglibs.version>
+		<acooly.taglibs.version>1.1.0</acooly.taglibs.version>
 		<acooly.module.security.version>3.2.0</acooly.module.security.version>
 		<acooly.module.sms>1.2.0</acooly.module.sms>
+		<acooly.module.lottery>1.0.0</acooly.module.lottery>
 
 		<!-- 第三方版本 -->
 		<spring.version>3.2.8.RELEASE</spring.version>
@@ -82,6 +83,13 @@
 				<artifactId>acooly-module-sms</artifactId>
 				<version>${acooly.module.sms}</version>
 			</dependency>
+			
+			<dependency>
+				<groupId>com.acooly</groupId>
+				<artifactId>acooly-module-lottery</artifactId>
+				<version>${acooly.module.lottery}</version>
+			</dependency>			
+			
 
 			<!--日志 采用slf4j 日志实现为logback -->
 			<dependency>
