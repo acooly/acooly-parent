@@ -83,13 +83,13 @@
 				<artifactId>acooly-module-sms</artifactId>
 				<version>${acooly.module.sms}</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>com.acooly</groupId>
 				<artifactId>acooly-module-lottery</artifactId>
 				<version>${acooly.module.lottery}</version>
-			</dependency>			
-			
+			</dependency>
+
 
 			<!--日志 采用slf4j 日志实现为logback -->
 			<dependency>
@@ -162,6 +162,11 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-web</artifactId>
 				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-web</artifactId>
+				<version>3.2.5.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
