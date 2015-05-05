@@ -37,6 +37,7 @@
 		<acooly.module.lottery>1.0.0</acooly.module.lottery>
 		<acooly.module.siteim>1.0.0</acooly.module.siteim>
 		<acooly.openapi.sdk>1.0.0</acooly.openapi.sdk>
+		<acooly.openapi>2.0.0</acooly.openapi>
 
 		<!-- 第三方版本 -->
 		<spring.version>3.2.8.RELEASE</spring.version>
@@ -92,6 +93,16 @@
 				<version>${acooly.module.lottery}</version>
 			</dependency>
 
+			<dependency>
+				<groupId>com.acooly</groupId>
+				<artifactId>acooly-openapi-core</artifactId>
+				<version>${acooly.openapi}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.acooly</groupId>
+				<artifactId>acooly-openapi-doc</artifactId>
+				<version>${acooly.openapi}</version>
+			</dependency>			
 			<dependency>
 				<groupId>com.acooly</groupId>
 				<artifactId>acooly-openapi-sdk</artifactId>
