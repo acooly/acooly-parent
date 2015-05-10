@@ -4,12 +4,13 @@
 
 	<groupId>com.acooly</groupId>
 	<artifactId>acooly-parent</artifactId>
-	<version>3.0.0</version>
+	<version>3.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>acooly-parent</name>
-	<description>acooly所有J2EE工程的Meven父配置, 统一：1.编译环境 2.插件配置 3.本地仓库配置 4.报告配置 。
-注意：这里不提供统一的基础依赖JAR包定义。JAR包的定义下沉到acooly-framework和具体的项目中自己定义。</description>
+	<description>acooly project maven archetype.
+v3.0.0: 升级所有的依赖有parent统一使用manage管理；核心组件最新版本也由parent统一管理。
+v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module-lottery版本为1.0.1</description>
 	<url>http://www.acooly.com/svn/framework/acooly-parent</url>
 
 	<properties>
@@ -34,8 +35,8 @@
 		<acooly.taglibs.version>1.1.0</acooly.taglibs.version>
 		<acooly.module.security.version>3.2.0</acooly.module.security.version>
 		<acooly.module.sms>1.2.0</acooly.module.sms>
-		<acooly.module.lottery>1.0.0</acooly.module.lottery>
-		<acooly.module.siteim>1.0.0</acooly.module.siteim>
+		<acooly.module.lottery>1.0.1</acooly.module.lottery>
+		<acooly.module.siteim>1.0.1</acooly.module.siteim>
 		<acooly.openapi.sdk>1.0.0</acooly.openapi.sdk>
 		<acooly.openapi>2.0.0</acooly.openapi>
 
@@ -102,7 +103,7 @@
 				<groupId>com.acooly</groupId>
 				<artifactId>acooly-openapi-doc</artifactId>
 				<version>${acooly.openapi}</version>
-			</dependency>			
+			</dependency>
 			<dependency>
 				<groupId>com.acooly</groupId>
 				<artifactId>acooly-openapi-sdk</artifactId>
@@ -860,7 +861,7 @@
 					<dependency>
 						<groupId>com.acooly</groupId>
 						<artifactId>acooly-parent-resources</artifactId>
-						<version>1.1.0</version>
+						<version>3.0.0</version>
 					</dependency>
 				</dependencies>
 			</plugin>
@@ -1091,6 +1092,11 @@
 			<name>acooly Internal Releases</name>
 			<url>http://acooly.wicp.net/nexus/content/repositories/releases/</url>
 		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshot</id>
+			<name>acooly Internal snapshot</name>
+			<url>http://acooly.wicp.net/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
 	</distributionManagement>
 
 	<modules>
