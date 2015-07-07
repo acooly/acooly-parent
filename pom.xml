@@ -13,7 +13,8 @@ v3.0.0: 升级所有的依赖有parent统一使用manage管理；核心组件最
 v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module-lottery版本为1.0.1
 [2015-05-30]: 升级siteim为1.0.2（兼容）
 [2015-06-23]: 升级siteim为1.0.3(兼容)
-[2015-07-07]: 升级core为3.0.1(兼容)</description>
+[2015-07-07]: 升级core为3.0.1(兼容)
+[2015-07-08]: 升级siteim为1.0.4(兼容)</description>
 	<url>http://www.acooly.com/svn/framework/acooly-parent</url>
 
 	<properties>
@@ -39,7 +40,7 @@ v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module
 		<acooly.module.security.version>3.2.0</acooly.module.security.version>
 		<acooly.module.sms>1.3.0</acooly.module.sms>
 		<acooly.module.lottery>1.0.1</acooly.module.lottery>
-		<acooly.module.siteim>1.0.3</acooly.module.siteim>
+		<acooly.module.siteim>1.0.4</acooly.module.siteim>
 		<acooly.openapi.sdk>1.0.0</acooly.openapi.sdk>
 		<acooly.openapi>2.0.0</acooly.openapi>
 
