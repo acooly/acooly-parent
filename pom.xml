@@ -44,6 +44,7 @@ v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module
 		<acooly.module.siteim>1.0.4</acooly.module.siteim>
 		<acooly.openapi.sdk>1.0.0</acooly.openapi.sdk>
 		<acooly.openapi>2.0.0</acooly.openapi>
+		<acooly.module.ofile>0.0.1</acooly.module.ofile>
 
 		<!-- 第三方版本 -->
 		<spring.version>3.2.8.RELEASE</spring.version>
@@ -121,6 +122,11 @@ v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module
 				<version>${acooly.module.siteim}</version>
 			</dependency>
 
+			<dependency>
+				<groupId>com.acooly</groupId>
+				<artifactId>acooly-module-ofile</artifactId>
+				<version>${acooly.module.ofile}</version>
+			</dependency>
 
 
 			<!--日志 采用slf4j 日志实现为logback -->
