@@ -126,8 +126,8 @@
 		<!-- use the following if you're not using a snapshot version. -->
 		<repository>
 			<id>nexus-releases</id>
-			<name>Feinno Internal Releases</name>
-			<url>http://www.acooly.com/nexus/content/repositories/releases/</url>
+			<name>acooly releases</name>
+			<url>http://acooly.wicp.net/nexus/content/repositories/releases/</url>
 		</repository>
 	</distributionManagement>	
 
