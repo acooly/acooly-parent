@@ -22,7 +22,8 @@ v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module
 [2015-08-28]: 升级sms为1.4.0(兼容)
 [2015-07-07]: 升级core为3.0.3(兼容)
 [2015-09-02]: 新增组件acooly-module-caches-v1.0.0
-[2015-09-02]: 新增组件acooly-module-app-v1.01</description>
+[2015-09-02]: 新增组件acooly-module-app-v1.01
+[2015-09-02]: 升级acooly-openapi-sdk版本为v1.1.0</description>
 	<url>http://www.acooly.com/svn/framework/acooly-parent</url>
 
 	<properties>
@@ -49,7 +50,7 @@ v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module
 		<acooly.module.sms>1.4.0</acooly.module.sms>
 		<acooly.module.lottery>1.0.1</acooly.module.lottery>
 		<acooly.module.siteim>1.0.4</acooly.module.siteim>
-		<acooly.openapi.sdk>1.0.0</acooly.openapi.sdk>
+		<acooly.openapi.sdk>1.1.0</acooly.openapi.sdk>
 		<acooly.openapi>2.0.0</acooly.openapi>
 		<acooly.module.ofile>0.0.1</acooly.module.ofile>
 		<acooly.module.olog>1.2.1</acooly.module.olog>
