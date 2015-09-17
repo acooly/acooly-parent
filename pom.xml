@@ -23,7 +23,8 @@ v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module
 [2015-07-07]: 升级core为3.0.3(兼容)
 [2015-09-02]: 新增组件acooly-module-caches-v1.0.0
 [2015-09-02]: 新增组件acooly-module-app-v1.01
-[2015-09-02]: 升级acooly-openapi-sdk版本为v1.1.0</description>
+[2015-09-02]: 升级acooly-openapi-sdk版本为v1.1.0
+[2015-09-17]: 升级app组件为v1.0.2</description>
 	<url>http://www.acooly.com/svn/framework/acooly-parent</url>
 
 	<properties>
@@ -55,7 +56,7 @@ v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module
 		<acooly.module.ofile>0.0.1</acooly.module.ofile>
 		<acooly.module.olog>1.2.1</acooly.module.olog>
 		<acooly.module.caches>1.0.0</acooly.module.caches>
-		<acooly.module.app>1.0.1</acooly.module.app>
+		<acooly.module.app>1.0.2</acooly.module.app>
 	
 		<!-- 第三方版本 -->
 		<spring.version>3.2.8.RELEASE</spring.version>
