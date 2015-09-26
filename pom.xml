@@ -24,7 +24,8 @@ v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module
 [2015-09-02]: 新增组件acooly-module-caches-v1.0.0
 [2015-09-02]: 新增组件acooly-module-app-v1.01
 [2015-09-02]: 升级acooly-openapi-sdk版本为v1.1.0
-[2015-09-17]: 升级app组件为v1.0.2</description>
+[2015-09-17]: 升级app组件为v1.0.2
+[2015-09-26]: 升级core为v3.0.4</description>
 	<url>http://www.acooly.com/svn/framework/acooly-parent</url>
 
 	<properties>
@@ -45,7 +46,7 @@ v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module
 		<maven_jetty_version>7.1.6.v20100715</maven_jetty_version>
 
 		<!-- acooly插件 -->
-		<acooly.core.version>3.0.3</acooly.core.version>
+		<acooly.core.version>3.0.4</acooly.core.version>
 		<acooly.taglibs.version>1.1.0</acooly.taglibs.version>
 		<acooly.module.security.version>3.2.0</acooly.module.security.version>
 		<acooly.module.sms>1.4.0</acooly.module.sms>
