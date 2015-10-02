@@ -4,12 +4,28 @@
 
 	<groupId>com.acooly</groupId>
 	<artifactId>acooly-parent</artifactId>
-	<version>3.1.0-SNAPSHOT</version>
+	<version>3.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>acooly-parent</name>
-	<description>acooly框架的parent统一使用manage管理；核心组件最新版本也由parent统一管理。
-</description>
+	<description>acooly project maven archetype.
+v3.0.0: 升级所有的依赖有parent统一使用manage管理；核心组件最新版本也由parent统一管理。
+v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module-lottery版本为1.0.1
+[2015-05-30]: 升级siteim为1.0.2（兼容）
+[2015-06-23]: 升级siteim为1.0.3(兼容)
+[2015-07-07]: 升级core为3.0.1(兼容)
+[2015-07-08]: 升级siteim为1.0.4(兼容)
+[2015-07-14]: 升级core为3.0.2(兼容)
+
+[2015-07-23]: 升级olog为1.2.1(首次加入)
+
+[2015-08-28]: 升级sms为1.4.0(兼容)
+[2015-07-07]: 升级core为3.0.3(兼容)
+[2015-09-02]: 新增组件acooly-module-caches-v1.0.0
+[2015-09-02]: 新增组件acooly-module-app-v1.01
+[2015-09-02]: 升级acooly-openapi-sdk版本为v1.1.0
+[2015-09-17]: 升级app组件为v1.0.2
+[2015-09-26]: 升级core为v3.0.4</description>
 	<url>http://www.acooly.com/svn/framework/acooly-parent</url>
 
 	<properties>
@@ -30,20 +46,18 @@
 		<maven_jetty_version>7.1.6.v20100715</maven_jetty_version>
 
 		<!-- acooly插件 -->
-		<acooly.core.version>3.1.0</acooly.core.version>
-		<acooly.module.app>1.1.0</acooly.module.app>
-		<acooly.openapi>2.0.1</acooly.openapi>
-		<acooly.module.security.version>3.3.1</acooly.module.security.version>
+		<acooly.core.version>3.0.4</acooly.core.version>
 		<acooly.taglibs.version>1.1.0</acooly.taglibs.version>
-		
+		<acooly.module.security.version>3.2.0</acooly.module.security.version>
 		<acooly.module.sms>1.4.0</acooly.module.sms>
 		<acooly.module.lottery>1.0.1</acooly.module.lottery>
 		<acooly.module.siteim>1.0.4</acooly.module.siteim>
 		<acooly.openapi.sdk>1.1.0</acooly.openapi.sdk>
+		<acooly.openapi>2.0.0</acooly.openapi>
 		<acooly.module.ofile>0.0.1</acooly.module.ofile>
 		<acooly.module.olog>1.2.1</acooly.module.olog>
 		<acooly.module.caches>1.0.0</acooly.module.caches>
-		
+		<acooly.module.app>1.0.2</acooly.module.app>
 	
 		<!-- 第三方版本 -->
 		<spring.version>3.2.8.RELEASE</spring.version>
