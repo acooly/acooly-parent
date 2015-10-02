@@ -32,13 +32,14 @@
 		<!-- acooly插件 -->
 		<acooly.core.version>3.1.0</acooly.core.version>
 		<acooly.module.app>1.1.0</acooly.module.app>
+		<acooly.openapi>2.0.1</acooly.openapi>
+		<acooly.module.security.version>3.3.1</acooly.module.security.version>
 		<acooly.taglibs.version>1.1.0</acooly.taglibs.version>
-		<acooly.module.security.version>3.2.0</acooly.module.security.version>
+		
 		<acooly.module.sms>1.4.0</acooly.module.sms>
 		<acooly.module.lottery>1.0.1</acooly.module.lottery>
 		<acooly.module.siteim>1.0.4</acooly.module.siteim>
 		<acooly.openapi.sdk>1.1.0</acooly.openapi.sdk>
-		<acooly.openapi>2.0.0</acooly.openapi>
 		<acooly.module.ofile>0.0.1</acooly.module.ofile>
 		<acooly.module.olog>1.2.1</acooly.module.olog>
 		<acooly.module.caches>1.0.0</acooly.module.caches>
