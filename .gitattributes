@@ -7,3 +7,4 @@ acooly-parent-resources/src/main/resources/jetty/webdefault_7.1.6.v20100715.xml 
 /deploy.bat -text
 /install.bat -text
 /pom.xml -text
+/readme.md -text
