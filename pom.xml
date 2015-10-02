@@ -26,7 +26,7 @@ v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module
 [2015-09-02]: 升级acooly-openapi-sdk版本为v1.1.0
 [2015-09-17]: 升级app组件为v1.0.2
 [2015-09-26]: 升级core为v3.0.4
-[2015-10-01]: 升级freemarker为2.3.23，升级core为3.0.5,acooly-module-app为1.0.3</description>
+</description>
 	<url>http://www.acooly.com/svn/framework/acooly-parent</url>
 
 	<properties>
@@ -47,7 +47,7 @@ v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module
 		<maven_jetty_version>7.1.6.v20100715</maven_jetty_version>
 
 		<!-- acooly插件 -->
-		<acooly.core.version>3.0.5</acooly.core.version>
+		<acooly.core.version>3.0.4</acooly.core.version>
 		<acooly.taglibs.version>1.1.0</acooly.taglibs.version>
 		<acooly.module.security.version>3.2.0</acooly.module.security.version>
 		<acooly.module.sms>1.4.0</acooly.module.sms>
@@ -58,7 +58,7 @@ v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module
 		<acooly.module.ofile>0.0.1</acooly.module.ofile>
 		<acooly.module.olog>1.2.1</acooly.module.olog>
 		<acooly.module.caches>1.0.0</acooly.module.caches>
-		<acooly.module.app>1.0.3</acooly.module.app>
+		<acooly.module.app>1.0.2</acooly.module.app>
 	
 		<!-- 第三方版本 -->
 		<spring.version>3.2.8.RELEASE</spring.version>
