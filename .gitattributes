@@ -4,7 +4,6 @@ acooly-parent-resources/src/main/resources/acooly-eclipse-codetemplates.xml -tex
 acooly-parent-resources/src/main/resources/acooly-eclipse-formatter.xml -text
 acooly-parent-resources/src/main/resources/checkstyle/acooly-checkstyle-sun-based.xml -text
 acooly-parent-resources/src/main/resources/jetty/webdefault_7.1.6.v20100715.xml -text
-/deploy-yijidev.bat -text
 /deploy.bat -text
 /install.bat -text
 /pom.xml -text
