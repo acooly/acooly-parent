@@ -12,6 +12,8 @@ acooly框架较大功能升级，整合兼容freemarker+jsp作为自适应兼容
 > 所有组件只要是3.1.x版本的即规划为已封装视图到组件中。
 
 * [2015-10-02]:发布3.1.0-SNAPSHOT, 升级core为3.1.0,acooly-module-app为1.1.0，升级module-security为3.3.1,升级openapi为2.0.1版本
+* [2015-10-15]：升级acooly-core为3.1.2版本
+
 
 ## v3.0.0-SNAPSHOT
 
