@@ -83,6 +83,12 @@
 			</dependency>
 			<dependency>
 				<groupId>com.acooly</groupId>
+				<artifactId>acooly-module-security</artifactId>
+				<version>${acooly.module.security.version}</version>
+				<classifier>static</classifier>
+			</dependency>			
+			<dependency>
+				<groupId>com.acooly</groupId>
 				<artifactId>acooly-taglibs</artifactId>
 				<version>${acooly.taglibs.version}</version>
 			</dependency>
