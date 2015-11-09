@@ -36,7 +36,7 @@
 		<acooly.module.security.version>3.4.1</acooly.module.security.version>
 		<acooly.taglibs.version>1.1.0</acooly.taglibs.version>
 		<acooly.module.ofile>1.0.0</acooly.module.ofile>
-		
+
 		<acooly.module.sms>1.4.0</acooly.module.sms>
 		<acooly.module.lottery>1.0.1</acooly.module.lottery>
 		<acooly.module.siteim>1.0.4</acooly.module.siteim>
@@ -86,7 +86,7 @@
 				<artifactId>acooly-module-security</artifactId>
 				<version>${acooly.module.security.version}</version>
 				<classifier>static</classifier>
-			</dependency>			
+			</dependency>
 			<dependency>
 				<groupId>com.acooly</groupId>
 				<artifactId>acooly-taglibs</artifactId>
@@ -1115,25 +1115,58 @@
 		</developer>
 	</developers>
 
-	<!-- 运行Deploy自动 发布到仓库 -->
-	<distributionManagement>
-		<!-- use the following if you're not using a snapshot version. -->
-		<repository>
-			<id>nexus-releases</id>
-			<name>acooly Internal Releases</name>
-			<url>http://acooly.wicp.net/nexus/content/repositories/releases/</url>
-		</repository>
-		<snapshotRepository>
-			<id>nexus-snapshot</id>
-			<name>acooly Internal snapshot</name>
-			<url>http://acooly.wicp.net/nexus/content/repositories/snapshots/</url>
-		</snapshotRepository>
+	<profiles>
+		<profile>
+			<id>acooly</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<distributionManagement>
+				<!-- use the following if you're not using a snapshot version. -->
+				<repository>
+					<id>nexus-releases</id>
+					<name>acooly Internal Releases</name>
+					<url>http://acooly.wicp.net/nexus/content/repositories/releases/</url>
+				</repository>
+				<snapshotRepository>
+					<id>nexus-snapshot</id>
+					<name>acooly Internal snapshot</name>
+					<url>http://acooly.wicp.net/nexus/content/repositories/snapshots/</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
 
-		<!-- <repository> <id>thirdparty</id> <url>http://192.168.45.35:8081/nexus/content/repositories/thirdparty</url> 
-			</repository> <snapshotRepository> <id>yiji-snapshots</id> <name>yiji 3rd 
-			party realease</name> <url>http://192.168.45.35:8081/nexus/content/repositories/snapshots/</url> 
-			</snapshotRepository> -->
-	</distributionManagement>
+		<profile>
+			<id>yiji_dev</id>
+			<distributionManagement>
+				<repository>
+					<id>thirdparty</id>
+					<url>http://192.168.45.35:8081/nexus/content/repositories/thirdparty</url>
+				</repository>
+				<snapshotRepository>
+					<id>yiji-snapshots</id>
+					<name>yiji 3rd-party realease</name>
+					<url>http://192.168.45.35:8081/nexus/content/repositories/snapshots/</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+
+		<profile>
+			<id>yiji_online</id>
+			<distributionManagement>
+				<repository>
+					<id>thirdparty</id>
+					<url>http://192.168.45.199:8081/nexus/content/repositories/thirdparty</url>
+				</repository>
+				<snapshotRepository>
+					<id>yiji-snapshots</id>
+					<name>yiji 3rd-party realease</name>
+					<url>http://192.168.45.199:8081/nexus/content/repositories/snapshots/</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+
+	</profiles>
 
 	<modules>
 		<module>acooly-parent-resources</module>

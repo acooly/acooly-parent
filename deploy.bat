@@ -1,6 +1,10 @@
 @echo off
-echo [INFO] Install parent pom.xml to local repository.
+echo [INFO] Install parent pom.xml to maven repository.
 
 cd %~dp0
-call mvn clean deploy -Dmaven.test.skip=true
+set profile=
+set /P profile=maven profile: %=%
+if defined profile (set profile=%profile%) else set profile=acooly
+echo [INFO] Chose maven profile: %profile%
+call mvn clean deploy -Dmaven.test.skip=true -P%profile%
 pause
