@@ -1124,12 +1124,12 @@
 			<distributionManagement>
 				<!-- use the following if you're not using a snapshot version. -->
 				<repository>
-					<id>nexus-releases</id>
+					<id>acooly-releases</id>
 					<name>acooly Internal Releases</name>
 					<url>http://acooly.wicp.net/nexus/content/repositories/releases/</url>
 				</repository>
 				<snapshotRepository>
-					<id>nexus-snapshot</id>
+					<id>acooly-snapshot</id>
 					<name>acooly Internal snapshot</name>
 					<url>http://acooly.wicp.net/nexus/content/repositories/snapshots/</url>
 				</snapshotRepository>
