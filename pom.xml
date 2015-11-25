@@ -37,9 +37,9 @@
 		<acooly.module.ofile>1.0.0</acooly.module.ofile>
 		<acooly.openapi>2.0.2</acooly.openapi>
 		<acooly.feature>1.0.0</acooly.feature>
+		<acooly.module.lottery>1.1.0</acooly.module.lottery>
 
 		<acooly.module.sms>1.4.0</acooly.module.sms>
-		<acooly.module.lottery>1.0.1</acooly.module.lottery>
 		<acooly.module.siteim>1.0.4</acooly.module.siteim>
 		<acooly.openapi.sdk>1.1.0</acooly.openapi.sdk>
 		<acooly.module.olog>1.2.1</acooly.module.olog>
