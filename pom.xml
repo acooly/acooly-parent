@@ -1133,12 +1133,12 @@
 				<repository>
 					<id>acooly-releases</id>
 					<name>acooly Internal Releases</name>
-					<url>http://acooly.wicp.net/nexus/content/repositories/releases/</url>
+					<url>http://acooly.cn/nexus/content/repositories/releases/</url>
 				</repository>
 				<snapshotRepository>
 					<id>acooly-snapshot</id>
 					<name>acooly Internal snapshot</name>
-					<url>http://acooly.wicp.net/nexus/content/repositories/snapshots/</url>
+					<url>http://acooly.cn/nexus/content/repositories/snapshots/</url>
 				</snapshotRepository>
 			</distributionManagement>
 		</profile>
