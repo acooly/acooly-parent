@@ -4,7 +4,7 @@
 
 	<groupId>com.acooly</groupId>
 	<artifactId>acooly-parent</artifactId>
-	<version>3.2.0-SNAPSHOT</version>
+	<version>3.1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>acooly-parent</name>
@@ -32,7 +32,7 @@
 		<!-- acooly插件 -->
 		<acooly.core.version>3.1.5</acooly.core.version>
 		<acooly.module.app>1.1.5</acooly.module.app>
-		<acooly.module.security.version>3.4.3</acooly.module.security.version>
+		<acooly.module.security.version>3.4.1</acooly.module.security.version>
 		<acooly.taglibs.version>1.1.0</acooly.taglibs.version>
 		<acooly.module.ofile>1.0.1</acooly.module.ofile>
 		<acooly.openapi>2.0.3</acooly.openapi>
