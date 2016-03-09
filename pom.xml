@@ -1127,12 +1127,12 @@ v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module
 	<distributionManagement>
 		<!-- use the following if you're not using a snapshot version. -->
 		<repository>
-			<id>nexus-releases</id>
+			<id>acooly-releases</id>
 			<name>acooly Internal Releases</name>
 			<url>http://acooly.cn/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
-			<id>nexus-snapshot</id>
+			<id>acooly-snapshot</id>
 			<name>acooly Internal snapshot</name>
 			<url>http://acooly.cn/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
