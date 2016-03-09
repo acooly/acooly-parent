@@ -1129,12 +1129,12 @@ v3.0.0-SNAPSHOT：升级acooly-module-siteim版本为1.0.1；升级acooly-module
 		<repository>
 			<id>nexus-releases</id>
 			<name>acooly Internal Releases</name>
-			<url>http://acooly.wicp.net/nexus/content/repositories/releases/</url>
+			<url>http://acooly.cn/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>nexus-snapshot</id>
 			<name>acooly Internal snapshot</name>
-			<url>http://acooly.wicp.net/nexus/content/repositories/snapshots/</url>
+			<url>http://acooly.cn/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 
 		<!-- <repository> <id>thirdparty</id> <url>http://192.168.45.35:8081/nexus/content/repositories/thirdparty</url> 
