@@ -52,6 +52,7 @@
 		<spring.data.commons.version>1.7.2.RELEASE</spring.data.commons.version>
 		<hibernate.version>4.3.4.Final</hibernate.version>
 		<hibernate.validator.version>4.3.1.Final</hibernate.validator.version>
+		<commons-validator.version>1.4.1</commons-validator.version>
 		<ehcache.version>2.6.6</ehcache.version>
 		<mysql.driver.version>5.1.31</mysql.driver.version>
 		<quartz.version>2.1.6</quartz.version>
@@ -215,6 +216,12 @@
 						<artifactId>log4j</artifactId>
 					</exclusion>
 				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-validator</groupId>
+				<artifactId>commons-validator</artifactId>
+				<version>${commons-validator.version}</version>
 			</dependency>
 
 			<!-- SPRING -->
