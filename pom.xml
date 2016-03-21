@@ -10,12 +10,13 @@
 	<name>acooly-parent</name>
 	<description>acooly框架的parent统一使用manage管理；核心组件最新版本也由parent统一管理。
 </description>
-	<url>http://www.acooly.com/svn/framework/acooly-parent</url>
+	<url>http://acooly.cn/svn/framework/acooly-parent</url>
 
 	<properties>
 		<!-- 编译属性 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jdk.version>1.7</jdk.version>
+		<deploy.skip>false</deploy.skip>
 
 		<!-- maven插件相关版本 -->
 		<maven.site.version>3.2</maven.site.version>
@@ -803,6 +804,16 @@
 					<source>${jdk.version}</source>
 					<target>${jdk.version}</target>
 					<showWarnings>true</showWarnings>
+				</configuration>
+			</plugin>
+
+			<!-- 打包插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.1</version>
+				<configuration>
+					<skip>${deploy.skip}</skip>
 				</configuration>
 			</plugin>
 
