@@ -31,7 +31,7 @@
 		<maven_jetty_version>7.1.6.v20100715</maven_jetty_version>
 
 		<!-- acooly插件 -->
-		<acooly.core.version>3.1.8</acooly.core.version>
+		<acooly.core.version>3.1.9</acooly.core.version>
 		<acooly.module.app>1.1.5</acooly.module.app>
 		<acooly.module.security.version>3.4.1</acooly.module.security.version>
 		<acooly.taglibs.version>1.1.0</acooly.taglibs.version>
