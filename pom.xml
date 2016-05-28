@@ -18,6 +18,23 @@
 		<jdk.version>1.7</jdk.version>
 		<deploy.skip>false</deploy.skip>
 
+		<!-- acooly核心，采用全兼容升级，由acooly-parent为版本和升级 -->
+		<acooly.core.version>3.1.11</acooly.core.version>
+
+		<!-- accoly 组件，从3.1.x开始固定不在parent中升级，由使用工具自己制定版本，方式项目冲突 -->
+		<acooly.module.app>1.1.5</acooly.module.app>
+		<acooly.module.security.version>3.4.1</acooly.module.security.version>
+		<acooly.taglibs.version>1.1.0</acooly.taglibs.version>
+		<acooly.module.ofile>1.0.1</acooly.module.ofile>
+		<acooly.openapi>2.0.3</acooly.openapi>
+		<acooly.feature>1.0.0</acooly.feature>
+		<acooly.module.lottery>1.1.1</acooly.module.lottery>
+		<acooly.module.sms>1.4.0</acooly.module.sms>
+		<acooly.module.siteim>1.0.4</acooly.module.siteim>
+		<acooly.openapi.sdk>1.1.0</acooly.openapi.sdk>
+		<acooly.module.olog>1.2.1</acooly.module.olog>
+		<acooly.module.caches>1.1.0</acooly.module.caches>
+
 		<!-- maven插件相关版本 -->
 		<maven.site.version>3.2</maven.site.version>
 		<project.info.reports.version>2.6</project.info.reports.version>
@@ -29,23 +46,6 @@
 		<maven_findbugs_version>2.5.2</maven_findbugs_version>
 		<maven_pmd_version>2.7</maven_pmd_version>
 		<maven_jetty_version>7.1.6.v20100715</maven_jetty_version>
-
-		<!-- acooly插件 -->
-		<acooly.core.version>3.1.10</acooly.core.version>
-		<acooly.module.app>1.1.5</acooly.module.app>
-		<acooly.module.security.version>3.4.1</acooly.module.security.version>
-		<acooly.taglibs.version>1.1.0</acooly.taglibs.version>
-		<acooly.module.ofile>1.0.1</acooly.module.ofile>
-		<acooly.openapi>2.0.3</acooly.openapi>
-		<acooly.feature>1.0.0</acooly.feature>
-		<acooly.module.lottery>1.1.1</acooly.module.lottery>
-
-		<acooly.module.sms>1.4.0</acooly.module.sms>
-		<acooly.module.siteim>1.0.4</acooly.module.siteim>
-		<acooly.openapi.sdk>1.1.0</acooly.openapi.sdk>
-		<acooly.module.olog>1.2.1</acooly.module.olog>
-		<acooly.module.caches>1.1.0</acooly.module.caches>
-
 
 		<!-- 第三方版本 -->
 		<spring.version>3.2.8.RELEASE</spring.version>
