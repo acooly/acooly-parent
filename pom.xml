@@ -19,7 +19,7 @@
 		<deploy.skip>false</deploy.skip>
 
 		<!-- acooly核心，采用全兼容升级，由acooly-parent为版本和升级 -->
-		<acooly.core.version>3.1.11</acooly.core.version>
+		<acooly.core.version>3.1.12</acooly.core.version>
 
 		<!-- accoly 组件，从3.1.x开始固定不在parent中升级，由使用工具自己制定版本，方式项目冲突 -->
 		<acooly.module.app>1.1.5</acooly.module.app>
