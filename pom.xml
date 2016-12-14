@@ -176,7 +176,11 @@
 				<artifactId>commons-collections</artifactId>
 				<version>3.2.1</version>
 			</dependency>
-
+			<dependency>
+				<groupId>commons-validator</groupId>
+				<artifactId>commons-validator</artifactId>
+				<version>1.5.1</version>
+			</dependency>
 
 			<!-- pojo copy -->
 			<dependency>
@@ -313,10 +317,36 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>log4j-over-slf4j</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-validator</groupId>
+			<artifactId>commons-validator</artifactId>
+		</dependency>
+
 	</dependencies>
 
 
@@ -470,7 +500,7 @@
 					<dependency>
 						<groupId>com.acooly</groupId>
 						<artifactId>acooly-parent-resources</artifactId>
-						<version>1.1.0</version>
+						<version>4.0.0-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 			</plugin>
