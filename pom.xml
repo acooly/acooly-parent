@@ -229,8 +229,8 @@
 
 			<dependency>
 				<groupId>com.alibaba</groupId>
-				<artifactId>druid</artifactId>
-				<version>0.2.6</version>
+				<artifactId>druid-ex</artifactId>
+				<version>1.0.20</version>
 			</dependency>
 
 			<!-- 条形码/二维码 -->
@@ -279,13 +279,6 @@
 				<version>${quartz.version}</version>
 			</dependency>
 
-			<!-- http client -->
-
-			<dependency>
-				<groupId>org.apache.httpcomponents</groupId>
-				<artifactId>httpcore-nio</artifactId>
-				<version>${httpclient.version}</version>
-			</dependency>
 
 			<dependency>
 				<groupId>opensymphony</groupId>
