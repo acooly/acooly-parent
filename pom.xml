@@ -187,6 +187,12 @@
 				<version>1.4</version>
 			</dependency>
 
+			<dependency>
+				<groupId>com.acooly</groupId>
+				<artifactId>acooly-taglibs</artifactId>
+				<version>4.0.0-SNAPSHOT</version>
+			</dependency>
+
 			<!-- pojo copy -->
 			<dependency>
 				<groupId>net.sf.dozer</groupId>
