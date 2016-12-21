@@ -22,20 +22,13 @@
 		<java.version>1.8</java.version>
 		<deploy.skip>false</deploy.skip>
 
-		<!-- acooly核心，采用全兼容升级，由acooly-parent为版本和升级 -->
-		<acooly.core.version>3.2.2</acooly.core.version>
 
 		<!-- maven插件相关版本 -->
-		<maven.site.version>3.2</maven.site.version>
-		<project.info.reports.version>2.6</project.info.reports.version>
 		<maven.checkstyle.version>2.9.1</maven.checkstyle.version>
 		<maven.jxr.version>2.3</maven.jxr.version>
-		<maven_javadoc_version>2.9</maven_javadoc_version>
-		<maven_surefire_report_version>2.12</maven_surefire_report_version>
 		<maven_cobertura_version>2.5.1</maven_cobertura_version>
 		<maven_findbugs_version>2.5.2</maven_findbugs_version>
 		<maven_pmd_version>2.7</maven_pmd_version>
-		<maven_jetty_version>7.1.6.v20100715</maven_jetty_version>
 
 		<!-- 第三方版本 -->
 		<quartz.version>2.1.6</quartz.version>
@@ -49,14 +42,6 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- acooly -->
-			<dependency>
-				<groupId>com.acooly</groupId>
-				<artifactId>acooly-core</artifactId>
-				<version>${acooly.core.version}</version>
-			</dependency>
-
-
 			<!-- AOP begin -->
 			<dependency>
 				<groupId>cglib</groupId>
@@ -312,6 +297,11 @@
 			<dependency>
 				<groupId>org.apache.shiro</groupId>
 				<artifactId>shiro-spring</artifactId>
+				<version>${shiro.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-aspectj</artifactId>
 				<version>${shiro.version}</version>
 			</dependency>
 		</dependencies>
