@@ -443,20 +443,6 @@
 					</archive>
 				</configuration>
 			</plugin>
-			<!-- 要将源码发布到仓库，需要加入这个插件 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
 
 			<!-- eclipse插件, 设定下载依赖包的source code -->
 			<plugin>
@@ -544,6 +530,42 @@
 					<id>acooly-snapshot</id>
 					<name>acooly Internal snapshot</name>
 					<url>http://acooly.cn/nexus/content/repositories/snapshots/</url>
+				</snapshotRepository>
+			</distributionManagement>
+			<build>
+				<plugins>
+					<!-- 要将源码发布到仓库，需要加入这个插件 -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>attach-sources</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>pccb</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<distributionManagement>
+				<!-- use the following if you're not using a snapshot version. -->
+				<repository>
+					<id>pccb-releases</id>
+					<name>acooly Internal Releases</name>
+					<url>http://192.168.2.114:8081/nexus/content/repositories/releases/</url>
+				</repository>
+				<snapshotRepository>
+					<id>pccb-snapshot</id>
+					<name>acooly Internal snapshot</name>
+					<url>http://192.168.2.114:8081/nexus/content/repositories/snapshots/</url>
 				</snapshotRepository>
 			</distributionManagement>
 		</profile>
