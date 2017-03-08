@@ -542,12 +542,11 @@
 			</activation>
 			<distributionManagement>
 				<repository>
-					<id>thirdparty</id>
-					<url>http://192.168.45.35:8081/nexus/content/repositories/thirdparty</url>
+					<id>yiji-releases</id>
+					<url>http://192.168.45.35:8081/nexus/content/repositories/releases/</url>
 				</repository>
 				<snapshotRepository>
 					<id>yiji-snapshots</id>
-					<name>yiji 3rd-party realease</name>
 					<url>http://192.168.45.35:8081/nexus/content/repositories/snapshots/</url>
 				</snapshotRepository>
 			</distributionManagement>
@@ -573,12 +572,11 @@
 			<id>online</id>
 			<distributionManagement>
 				<repository>
-					<id>thirdparty</id>
-					<url>http://192.168.45.199:8081/nexus/content/repositories/thirdparty</url>
+					<id>yiji-releases</id>
+					<url>http://192.168.45.199:8081/nexus/content/repositories/releases/</url>
 				</repository>
 				<snapshotRepository>
 					<id>yiji-snapshots</id>
-					<name>yiji 3rd-party realease</name>
 					<url>http://192.168.45.199:8081/nexus/content/repositories/snapshots/</url>
 				</snapshotRepository>
 			</distributionManagement>
@@ -613,7 +611,7 @@
 					</url>
 				</repository>
 				<snapshotRepository>
-					<id>acooly-snapshot</id>
+					<id>acooly-snapshots</id>
 					<name>acooly Internal snapshot</name>
 					<url>
 						http://acooly.cn/nexus/content/repositories/snapshots/
