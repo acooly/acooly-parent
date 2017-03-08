@@ -4,8 +4,6 @@ acooly-parent
 # 简介
 acooly框架统一父pom文件。
 
-提交到金融科技gitlab:git push -u fintech master
-
 
 # 版本记录
 
