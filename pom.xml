@@ -14,8 +14,6 @@
 	<name>acooly-parent</name>
 	<description>acooly框架的parent统一使用manage管理；核心组件最新版本也由parent统一管理。
 	</description>
-	<url>http://acooly.cn/svn/framework/acooly-parent</url>
-
 	<properties>
 		<!-- 编译属性 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -233,8 +231,8 @@
 
 			<dependency>
 				<groupId>com.alibaba</groupId>
-				<artifactId>druid-ex</artifactId>
-				<version>1.0.20</version>
+				<artifactId>druid</artifactId>
+				<version>yiji-1.0.20</version>
 			</dependency>
 
 			<!-- 条形码/二维码 -->
@@ -522,30 +520,70 @@
 				<mobileNo>13896177630</mobileNo>
 			</properties>
 		</developer>
+		<developer>
+			<id>2</id>
+			<name>邱占波</name>
+			<email>qiubo@yiji.com</email>
+			<roles>
+				<role>系统架构师</role>
+			</roles>
+			<properties>
+				<mobileNo>18580039996</mobileNo>
+			</properties>
+		</developer>
 	</developers>
 
 	<profiles>
+
 		<profile>
-			<id>acooly</id>
+			<id>dev</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<distributionManagement>
-				<!-- use the following if you're not using a snapshot version. -->
 				<repository>
-					<id>acooly-releases</id>
-					<name>acooly Internal Releases</name>
-					<url>http://acooly.cn/nexus/content/repositories/releases/</url>
+					<id>thirdparty</id>
+					<url>http://192.168.45.35:8081/nexus/content/repositories/thirdparty</url>
 				</repository>
 				<snapshotRepository>
-					<id>acooly-snapshot</id>
-					<name>acooly Internal snapshot</name>
-					<url>http://acooly.cn/nexus/content/repositories/snapshots/</url>
+					<id>yiji-snapshots</id>
+					<name>yiji 3rd-party realease</name>
+					<url>http://192.168.45.35:8081/nexus/content/repositories/snapshots/</url>
 				</snapshotRepository>
 			</distributionManagement>
 			<build>
 				<plugins>
-					<!-- 要将源码发布到仓库，需要加入这个插件 -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>attach-sources</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>online</id>
+			<distributionManagement>
+				<repository>
+					<id>thirdparty</id>
+					<url>http://192.168.45.199:8081/nexus/content/repositories/thirdparty</url>
+				</repository>
+				<snapshotRepository>
+					<id>yiji-snapshots</id>
+					<name>yiji 3rd-party realease</name>
+					<url>http://192.168.45.199:8081/nexus/content/repositories/snapshots/</url>
+				</snapshotRepository>
+			</distributionManagement>
+			<build>
+				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-source-plugin</artifactId>
@@ -562,58 +600,42 @@
 			</build>
 		</profile>
 		<profile>
-			<id>pccb</id>
+			<id>acooly</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<distributionManagement>
-				<!-- use the following if you're not using a snapshot version. -->
 				<repository>
-					<id>pccb-releases</id>
+					<id>acooly-releases</id>
 					<name>acooly Internal Releases</name>
-					<url>http://192.168.2.114:8081/nexus/content/repositories/releases/</url>
+					<url>
+						http://acooly.cn/nexus/content/repositories/releases/
+					</url>
 				</repository>
 				<snapshotRepository>
-					<id>pccb-snapshot</id>
+					<id>acooly-snapshot</id>
 					<name>acooly Internal snapshot</name>
-					<url>http://192.168.2.114:8081/nexus/content/repositories/snapshots/</url>
+					<url>
+						http://acooly.cn/nexus/content/repositories/snapshots/
+					</url>
 				</snapshotRepository>
 			</distributionManagement>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>attach-sources</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
-
-		<profile>
-			<id>yiji_dev</id>
-			<distributionManagement>
-				<repository>
-					<id>thirdparty</id>
-					<url>http://192.168.45.35:8081/nexus/content/repositories/thirdparty</url>
-				</repository>
-				<snapshotRepository>
-					<id>yiji-snapshots</id>
-					<name>yiji 3rd-party realease</name>
-					<url>http://192.168.45.35:8081/nexus/content/repositories/snapshots/</url>
-				</snapshotRepository>
-			</distributionManagement>
-		</profile>
-
-		<profile>
-			<id>yiji_online</id>
-			<distributionManagement>
-				<repository>
-					<id>thirdparty</id>
-					<url>http://192.168.45.199:8081/nexus/content/repositories/thirdparty</url>
-				</repository>
-				<snapshotRepository>
-					<id>yiji-snapshots</id>
-					<name>yiji 3rd-party realease</name>
-					<url>http://192.168.45.199:8081/nexus/content/repositories/snapshots/</url>
-				</snapshotRepository>
-			</distributionManagement>
-		</profile>
-
 	</profiles>
-
-	<modules>
-		<module>acooly-parent-resources</module>
-	</modules>
 </project>
