@@ -567,7 +567,19 @@
 				</plugins>
 			</build>
 		</profile>
-
+		<profile>
+			<id>fintech</id>
+			<distributionManagement>
+				<repository>
+					<id>yiji-releases</id>
+					<url>http://192.168.45.35:8081/nexus/content/repositories/fintech-releases/</url>
+				</repository>
+				<snapshotRepository>
+					<id>yiji-snapshots</id>
+					<url>http://192.168.45.35:8081/nexus/content/repositories/fintech-snapshots/</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
 		<profile>
 			<id>acooly</id>
 			<activation>
