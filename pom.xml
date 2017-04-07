@@ -29,7 +29,7 @@
 		<maven_pmd_version>2.7</maven_pmd_version>
 
 		<!-- 第三方版本 -->
-		<quartz.version>2.1.6</quartz.version>
+		<quartz.version>2.2.3</quartz.version>
 		<activemq.version>5.7.0</activemq.version>
 		<spymemcached.version>2.8.7</spymemcached.version>
 		<commons-validator.version>1.4.1</commons-validator.version>
@@ -278,6 +278,11 @@
 			<dependency>
 				<groupId>org.quartz-scheduler</groupId>
 				<artifactId>quartz</artifactId>
+				<version>${quartz.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.quartz-scheduler</groupId>
+				<artifactId>quartz-jobs</artifactId>
 				<version>${quartz.version}</version>
 			</dependency>
 
