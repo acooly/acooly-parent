@@ -237,7 +237,7 @@
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>druid</artifactId>
-				<version>yiji-1.0.21</version>
+				<version>1.0.31</version>
 			</dependency>
 
 			<!-- 条形码/二维码 -->
