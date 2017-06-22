@@ -329,6 +329,16 @@
 				<artifactId>javatuples</artifactId>
 				<version>1.2</version>
 			</dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>0.6.0</version>
+            </dependency>
+            <dependency>
+                <groupId>eu.bitwalker</groupId>
+                <artifactId>UserAgentUtils</artifactId>
+                <version>1.20</version>
+            </dependency>
 		</dependencies>
 	</dependencyManagement>
 
