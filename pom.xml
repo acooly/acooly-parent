@@ -625,6 +625,44 @@
 			</build>
 		</profile>
 		<profile>
+			<id>acooly</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<distributionManagement>
+				<repository>
+					<id>acooly-releases</id>
+					<name>acooly Internal Releases</name>
+					<url>
+						http://acooly.cn/nexus/content/repositories/releases/
+					</url>
+				</repository>
+				<snapshotRepository>
+					<id>acooly-snapshots</id>
+					<name>acooly Internal snapshot</name>
+					<url>
+						http://acooly.cn/nexus/content/repositories/snapshots/
+					</url>
+				</snapshotRepository>
+			</distributionManagement>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>attach-sources</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
 			<id>fintech</id>
 			<distributionManagement>
 				<repository>
