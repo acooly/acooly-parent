@@ -29,13 +29,10 @@
 		<maven_pmd_version>2.7</maven_pmd_version>
 
 		<!-- 第三方版本 -->
-		<quartz.version>2.2.3</quartz.version>
-		<activemq.version>5.7.0</activemq.version>
-		<spymemcached.version>2.8.7</spymemcached.version>
+		<quartz.version>2.3.0</quartz.version>
 		<commons-validator.version>1.4.1</commons-validator.version>
 		<commons.logging.version>1.2</commons.logging.version>
-		<fastjson.version>1.2.47</fastjson.version>
-		<shiro.version>1.3.2</shiro.version>
+		<shiro.version>1.4.0</shiro.version>
 	</properties>
 
 	<dependencyManagement>
@@ -84,7 +81,7 @@
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>fastjson</artifactId>
-				<version>${fastjson.version}</version>
+				<version>1.2.47</version>
 			</dependency>
 
 			<!-- XML begin -->
