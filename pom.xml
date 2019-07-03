@@ -152,7 +152,7 @@
 			<dependency>
 				<groupId>com.acooly</groupId>
 				<artifactId>acooly-taglibs</artifactId>
-				<version>4.1.0-SNAPSHOT</version>
+				<version>${project.version}</version>
 			</dependency>
 
 			<!-- pojo copy -->
