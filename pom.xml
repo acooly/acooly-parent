@@ -13,8 +13,7 @@
 	<packaging>pom</packaging>
 
 	<name>acooly-parent</name>
-	<description>acooly框架的parent统一使用manage管理；核心组件最新版本也由parent统一管理。
-	</description>
+	<description>acooly框架的parent统一使用manage管理；核心组件最新版本也由parent统一管理。</description>
 	<properties>
 		<!-- 编译属性 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -147,12 +146,6 @@
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-email</artifactId>
 				<version>1.5</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.acooly</groupId>
-				<artifactId>acooly-taglibs</artifactId>
-				<version>${project.version}</version>
 			</dependency>
 
 			<!-- pojo copy -->
