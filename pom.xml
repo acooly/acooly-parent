@@ -9,7 +9,7 @@
 
 	<groupId>com.acooly</groupId>
 	<artifactId>acooly-parent</artifactId>
-	<version>5.0.0-SNAPSHOT</version>
+	<version>5.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>acooly-parent</name>
@@ -325,8 +325,8 @@
 	</build>
 
 	<organization>
-		<name>苦力 acooly</name>
-		<url>http://www.acooly.com</url>
+		<name>Acooly</name>
+		<url>https://www.acooly.cn</url>
 	</organization>
 
 	<developers>
