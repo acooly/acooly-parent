@@ -37,5 +37,3 @@ acooly框架较大功能升级，整合兼容freemarker+jsp作为自适应兼容
 ## v3.0.0
 升级所有的依赖有parent统一使用manage管理；核心组件最新版本也由parent统一管理。
 
-
-
