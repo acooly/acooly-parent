@@ -1,397 +1,399 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.5.RELEASE</version>
-	</parent>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.5.RELEASE</version>
+    </parent>
 
-	<groupId>com.acooly</groupId>
-	<artifactId>acooly-parent</artifactId>
-	<version>5.0.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
+    <groupId>com.acooly</groupId>
+    <artifactId>acooly-parent</artifactId>
+    <version>5.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-	<name>acooly-parent</name>
-	<description>acooly框架的parent统一使用manage管理；核心组件最新版本也由parent统一管理。</description>
-	<properties>
-		<!-- 编译属性 -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
-		<deploy.skip>false</deploy.skip>
+    <name>acooly-parent</name>
+    <description>acooly框架的parent统一使用manage管理；核心组件最新版本也由parent统一管理。</description>
+    <properties>
+        <!-- 编译属性 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <deploy.skip>false</deploy.skip>
 
-		<spring.boot.version>2.1.5.RELEASE</spring.boot.version>
+        <spring.boot.version>2.1.5.RELEASE</spring.boot.version>
 
-		<!-- maven插件相关版本 -->
-		<maven.checkstyle.version>2.9.1</maven.checkstyle.version>
-		<maven.jxr.version>2.3</maven.jxr.version>
-		<maven_cobertura_version>2.5.1</maven_cobertura_version>
-		<maven_findbugs_version>2.5.2</maven_findbugs_version>
-		<maven_pmd_version>2.7</maven_pmd_version>
+        <!-- maven插件相关版本 -->
+        <maven.checkstyle.version>2.9.1</maven.checkstyle.version>
+        <maven.jxr.version>2.3</maven.jxr.version>
+        <maven_cobertura_version>2.5.1</maven_cobertura_version>
+        <maven_findbugs_version>2.5.2</maven_findbugs_version>
+        <maven_pmd_version>2.7</maven_pmd_version>
 
-		<!-- 第三方版本 -->
-		<quartz.version>2.3.0</quartz.version>
-		<commons-validator.version>1.4.1</commons-validator.version>
-		<commons.logging.version>1.2</commons.logging.version>
-		<shiro.version>1.7.0</shiro.version>
-	</properties>
+        <!-- 第三方版本 -->
+        <quartz.version>2.3.0</quartz.version>
+        <commons-validator.version>1.4.1</commons-validator.version>
+        <commons.logging.version>1.2</commons.logging.version>
+        <shiro.version>1.7.0</shiro.version>
+        <fastjson.version>1.2.80</fastjson.version>
+    </properties>
 
-	<dependencyManagement>
-		<dependencies>
-			<!-- AOP begin -->
-			<dependency>
-				<groupId>cglib</groupId>
-				<artifactId>cglib</artifactId>
-				<version>3.2.7</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>asm</artifactId>
-						<groupId>org.ow2.asm</groupId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>org.ow2.asm</groupId>
-				<artifactId>asm-util</artifactId>
-				<version>6.2</version>
-			</dependency>
-			<!-- AOP end -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- AOP begin -->
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>3.2.7</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>asm</artifactId>
+                        <groupId>org.ow2.asm</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.ow2.asm</groupId>
+                <artifactId>asm-util</artifactId>
+                <version>6.2</version>
+            </dependency>
+            <!-- AOP end -->
 
-			<!-- 数据库驱动 -->
-			<dependency>
-				<groupId>com.oracle</groupId>
-				<artifactId>ojdbc14</artifactId>
-				<version>10.2.0.4.0</version>
-			</dependency>
-			<dependency>
-				<groupId>com.oracle</groupId>
-				<artifactId>ojdbc6</artifactId>
-				<version>11.2.0.3</version>
-			</dependency>
-
-
-			<!-- jodd-form tag used for automitic mapping form -->
-			<dependency>
-				<groupId>org.springside</groupId>
-				<artifactId>joddform</artifactId>
-				<version>1.0.1</version>
-			</dependency>
-			<!-- template engine -->
+            <!-- 数据库驱动 -->
+            <dependency>
+                <groupId>com.oracle</groupId>
+                <artifactId>ojdbc14</artifactId>
+                <version>10.2.0.4.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.oracle</groupId>
+                <artifactId>ojdbc6</artifactId>
+                <version>11.2.0.3</version>
+            </dependency>
 
 
-			<dependency>
-				<groupId>com.alibaba</groupId>
-				<artifactId>fastjson</artifactId>
-				<version>1.2.48.sec06</version>
-			</dependency>
-
-			<!-- XML begin -->
-			<dependency>
-				<groupId>dom4j</groupId>
-				<artifactId>dom4j</artifactId>
-				<version>1.6.1</version>
-				<exclusions>
-					<exclusion>
-						<groupId>xml-apis</groupId>
-						<artifactId>xml-apis</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-
-			<!-- Apache Common -->
-			<!-- GENERAL UTILS begin -->
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-lang3</artifactId>
-				<version>3.7</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-io</groupId>
-				<artifactId>commons-io</artifactId>
-				<version>2.6</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-codec</groupId>
-				<artifactId>commons-codec</artifactId>
-				<version>1.11</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-beanutils</groupId>
-				<artifactId>commons-beanutils</artifactId>
-				<version>1.9.3</version>
-				<exclusions>
-					<exclusion>
-						<groupId>commons-logging</groupId>
-						<artifactId>commons-logging</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>commons-fileupload</groupId>
-				<artifactId>commons-fileupload</artifactId>
-				<version>1.3.3</version>
-			</dependency>
-
-			<dependency>
-				<groupId>commons-collections</groupId>
-				<artifactId>commons-collections</artifactId>
-				<version>3.2.2</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-validator</groupId>
-				<artifactId>commons-validator</artifactId>
-				<version>1.6</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-email</artifactId>
-				<version>1.5</version>
-			</dependency>
-
-			<!-- pojo copy -->
-			<dependency>
-				<groupId>net.sf.dozer</groupId>
-				<artifactId>dozer</artifactId>
-				<version>5.5.1</version>
-			</dependency>
-
-			<!-- google java library -->
-			<dependency>
-				<groupId>com.google.guava</groupId>
-				<artifactId>guava</artifactId>
-				<version>20.0</version>
-			</dependency>
+            <!-- jodd-form tag used for automitic mapping form -->
+            <dependency>
+                <groupId>org.springside</groupId>
+                <artifactId>joddform</artifactId>
+                <version>1.0.1</version>
+            </dependency>
+            <!-- template engine -->
 
 
-			<dependency>
-				<groupId>net.sourceforge.jexcelapi</groupId>
-				<artifactId>jxl</artifactId>
-				<version>2.6.12</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>log4j</artifactId>
-						<groupId>log4j</groupId>
-					</exclusion>
-				</exclusions>
-			</dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+                <!--				<version>1.2.48.sec06</version>-->
+            </dependency>
 
-			<dependency>
-				<groupId>org.apache.poi</groupId>
-				<artifactId>poi</artifactId>
-				<version>3.17</version>
-			</dependency>
+            <!-- XML begin -->
+            <dependency>
+                <groupId>dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>1.6.1</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>xml-apis</groupId>
+                        <artifactId>xml-apis</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
 
-			<dependency>
-				<groupId>org.apache.poi</groupId>
-				<artifactId>poi-ooxml</artifactId>
-				<version>3.17</version>
-			</dependency>
+            <!-- Apache Common -->
+            <!-- GENERAL UTILS begin -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.7</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.6</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.11</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>1.9.3</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>1.3.3</version>
+            </dependency>
 
-			<!-- PDF -->
-			<dependency>
-				<groupId>com.itextpdf</groupId>
-				<artifactId>itextpdf</artifactId>
-				<version>5.5.13</version>
-			</dependency>
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>3.2.2</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-validator</groupId>
+                <artifactId>commons-validator</artifactId>
+                <version>1.6</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-email</artifactId>
+                <version>1.5</version>
+            </dependency>
 
-			<dependency>
-				<groupId>com.alibaba</groupId>
-				<artifactId>druid</artifactId>
-				<version>1.1.10</version>
-			</dependency>
+            <!-- pojo copy -->
+            <dependency>
+                <groupId>net.sf.dozer</groupId>
+                <artifactId>dozer</artifactId>
+                <version>5.5.1</version>
+            </dependency>
 
-			<!-- 条形码/二维码 -->
-			<dependency>
-				<groupId>com.google.zxing</groupId>
-				<artifactId>javase</artifactId>
-				<version>3.3.3</version>
-			</dependency>
+            <!-- google java library -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>20.0</version>
+            </dependency>
 
-			<!-- scheduler -->
-			<dependency>
-				<groupId>org.quartz-scheduler</groupId>
-				<artifactId>quartz</artifactId>
-				<version>${quartz.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.quartz-scheduler</groupId>
-				<artifactId>quartz-jobs</artifactId>
-				<version>${quartz.version}</version>
-			</dependency>
 
-			<dependency>
-				<groupId>org.projectlombok</groupId>
-				<artifactId>lombok</artifactId>
-				<version>1.18.0</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.shiro</groupId>
-				<artifactId>shiro-web</artifactId>
-				<version>${shiro.version}</version>
-			</dependency>
+            <dependency>
+                <groupId>net.sourceforge.jexcelapi</groupId>
+                <artifactId>jxl</artifactId>
+                <version>2.6.12</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>log4j</artifactId>
+                        <groupId>log4j</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
 
-			<dependency>
-				<groupId>org.apache.shiro</groupId>
-				<artifactId>shiro-spring</artifactId>
-				<version>${shiro.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.shiro</groupId>
-				<artifactId>shiro-core</artifactId>
-				<version>${shiro.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.shiro</groupId>
-				<artifactId>shiro-aspectj</artifactId>
-				<version>${shiro.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.javatuples</groupId>
-				<artifactId>javatuples</artifactId>
-				<version>1.2</version>
-			</dependency>
-			<dependency>
-				<groupId>io.jsonwebtoken</groupId>
-				<artifactId>jjwt</artifactId>
-				<version>0.9.1</version>
-			</dependency>
-			<dependency>
-				<groupId>eu.bitwalker</groupId>
-				<artifactId>UserAgentUtils</artifactId>
-				<version>1.21</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>3.17</version>
+            </dependency>
 
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-maven-plugin</artifactId>
-					<executions>
-						<execution>
-							<goals>
-								<goal>repackage</goal>
-							</goals>
-						</execution>
-					</executions>
-					<!--<dependencies>-->
-					<!--&lt;!&ndash; hotswap&ndash;&gt;-->
-					<!--<dependency>-->
-					<!--<groupId>org.springframework</groupId>-->
-					<!--<artifactId>springloaded</artifactId>-->
-					<!--<version>1.2.8.RELEASE</version>-->
-					<!--</dependency>-->
-					<!--</dependencies>-->
-					<configuration>
-						<!--不生成可执行的jar包-->
-						<executable>false</executable>
-						<!--生成jar包时排出devTools-->
-						<excludeDevtools>true</excludeDevtools>
-						<!--<mainClass>${start-class}</mainClass>-->
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-		<!-- 插件默认配置, 子项目可以覆盖 -->
-		<plugins>
-			<!-- compiler插件, 设定JDK版本 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-					<optimize>true</optimize>
-					<compilerArgument>-parameters</compilerArgument>
-				</configuration>
-			</plugin>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>3.17</version>
+            </dependency>
 
-			<!-- 打包插件 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-deploy-plugin</artifactId>
-				<configuration>
-					<skip>${deploy.skip}</skip>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>versions-maven-plugin</artifactId>
-				<version>2.5</version>
-			</plugin>
-		</plugins>
-	</build>
+            <!-- PDF -->
+            <dependency>
+                <groupId>com.itextpdf</groupId>
+                <artifactId>itextpdf</artifactId>
+                <version>5.5.13</version>
+            </dependency>
 
-	<organization>
-		<name>Acooly</name>
-		<url>https://www.acooly.cn</url>
-	</organization>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.1.10</version>
+            </dependency>
 
-	<developers>
-		<developer>
-			<id>1</id>
-			<name>张浦</name>
-			<email>zpuser@gmail.com</email>
-			<roles>
-				<role>系统架构师</role>
-			</roles>
-			<properties>
-				<mobileNo>13896177630</mobileNo>
-			</properties>
-		</developer>
-		<developer>
-			<id>2</id>
-			<name>邱占波</name>
-			<email>qiubo@yiji.com</email>
-			<roles>
-				<role>系统架构师</role>
-			</roles>
-			<properties>
-				<mobileNo>18580039996</mobileNo>
-			</properties>
-		</developer>
-	</developers>
+            <!-- 条形码/二维码 -->
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>javase</artifactId>
+                <version>3.3.3</version>
+            </dependency>
 
-	<profiles>
-		<profile>
-			<id>acooly</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<distributionManagement>
-				<repository>
-					<id>acooly-releases</id>
-					<name>acooly Internal Releases</name>
-					<url>
-						http://acooly.cn/nexus/content/repositories/releases/
-					</url>
-				</repository>
-				<snapshotRepository>
-					<id>acooly-snapshots</id>
-					<name>acooly Internal snapshot</name>
-					<url>
-						http://acooly.cn/nexus/content/repositories/snapshots/
-					</url>
-				</snapshotRepository>
-			</distributionManagement>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-source-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>attach-sources</id>
-								<goals>
-									<goal>jar</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
+            <!-- scheduler -->
+            <dependency>
+                <groupId>org.quartz-scheduler</groupId>
+                <artifactId>quartz</artifactId>
+                <version>${quartz.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.quartz-scheduler</groupId>
+                <artifactId>quartz-jobs</artifactId>
+                <version>${quartz.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-web</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-core</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-aspectj</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.javatuples</groupId>
+                <artifactId>javatuples</artifactId>
+                <version>1.2</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>0.9.1</version>
+            </dependency>
+            <dependency>
+                <groupId>eu.bitwalker</groupId>
+                <artifactId>UserAgentUtils</artifactId>
+                <version>1.21</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <!--<dependencies>-->
+                    <!--&lt;!&ndash; hotswap&ndash;&gt;-->
+                    <!--<dependency>-->
+                    <!--<groupId>org.springframework</groupId>-->
+                    <!--<artifactId>springloaded</artifactId>-->
+                    <!--<version>1.2.8.RELEASE</version>-->
+                    <!--</dependency>-->
+                    <!--</dependencies>-->
+                    <configuration>
+                        <!--不生成可执行的jar包-->
+                        <executable>false</executable>
+                        <!--生成jar包时排出devTools-->
+                        <excludeDevtools>true</excludeDevtools>
+                        <!--<mainClass>${start-class}</mainClass>-->
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <!-- 插件默认配置, 子项目可以覆盖 -->
+        <plugins>
+            <!-- compiler插件, 设定JDK版本 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <optimize>true</optimize>
+                    <compilerArgument>-parameters</compilerArgument>
+                </configuration>
+            </plugin>
+
+            <!-- 打包插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>${deploy.skip}</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <organization>
+        <name>Acooly</name>
+        <url>https://www.acooly.cn</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>1</id>
+            <name>张浦</name>
+            <email>zpuser@gmail.com</email>
+            <roles>
+                <role>系统架构师</role>
+            </roles>
+            <properties>
+                <mobileNo>13896177630</mobileNo>
+            </properties>
+        </developer>
+        <developer>
+            <id>2</id>
+            <name>邱占波</name>
+            <email>qiubo@yiji.com</email>
+            <roles>
+                <role>系统架构师</role>
+            </roles>
+            <properties>
+                <mobileNo>18580039996</mobileNo>
+            </properties>
+        </developer>
+    </developers>
+
+    <profiles>
+        <profile>
+            <id>acooly</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <distributionManagement>
+                <repository>
+                    <id>acooly-releases</id>
+                    <name>acooly Internal Releases</name>
+                    <url>
+                        http://acooly.cn/nexus/content/repositories/releases/
+                    </url>
+                </repository>
+                <snapshotRepository>
+                    <id>acooly-snapshots</id>
+                    <name>acooly Internal snapshot</name>
+                    <url>
+                        http://acooly.cn/nexus/content/repositories/snapshots/
+                    </url>
+                </snapshotRepository>
+            </distributionManagement>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
