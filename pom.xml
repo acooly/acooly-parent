@@ -27,8 +27,6 @@
         <maven_findbugs_version>2.5.2</maven_findbugs_version>
         <maven_pmd_version>2.7</maven_pmd_version>
 
-        <!-- 第三方版本 -->
-        <quartz.version>2.3.0</quartz.version>
         <commons-validator.version>1.4.1</commons-validator.version>
         <commons.logging.version>1.2</commons.logging.version>
         <shiro.version>1.7.0</shiro.version>
@@ -68,7 +66,6 @@
                 <version>11.2.0.3</version>
             </dependency>
 
-
             <!-- jodd-form tag used for automitic mapping form -->
             <dependency>
                 <groupId>org.springside</groupId>
@@ -77,12 +74,10 @@
             </dependency>
             <!-- template engine -->
 
-
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
-                <!--				<version>1.2.48.sec06</version>-->
             </dependency>
 
             <!-- XML begin -->
@@ -99,22 +94,22 @@
             </dependency>
 
             <!-- Apache Common -->
-            <!-- GENERAL UTILS begin -->
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>3.7</version>
-            </dependency>
+            <!-- from springboot, use v3.10 -->
+            <!--            <dependency>-->
+            <!--                <groupId>org.apache.commons</groupId>-->
+            <!--                <artifactId>commons-lang3</artifactId>-->
+            <!--                <version>3.10</version>-->
+            <!--            </dependency>-->
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>2.6</version>
             </dependency>
-            <dependency>
-                <groupId>commons-codec</groupId>
-                <artifactId>commons-codec</artifactId>
-                <version>1.11</version>
-            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>commons-codec</groupId>-->
+            <!--                <artifactId>commons-codec</artifactId>-->
+            <!--                <version>1.14</version>-->
+            <!--            </dependency>-->
             <dependency>
                 <groupId>commons-beanutils</groupId>
                 <artifactId>commons-beanutils</artifactId>
@@ -207,23 +202,7 @@
                 <version>3.3.3</version>
             </dependency>
 
-            <!-- scheduler -->
-            <dependency>
-                <groupId>org.quartz-scheduler</groupId>
-                <artifactId>quartz</artifactId>
-                <version>${quartz.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.quartz-scheduler</groupId>
-                <artifactId>quartz-jobs</artifactId>
-                <version>${quartz.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.18.0</version>
-            </dependency>
+            <!-- shiro -->
             <dependency>
                 <groupId>org.apache.shiro</groupId>
                 <artifactId>shiro-web</artifactId>
@@ -245,11 +224,14 @@
                 <artifactId>shiro-aspectj</artifactId>
                 <version>${shiro.version}</version>
             </dependency>
+
+
             <dependency>
                 <groupId>org.javatuples</groupId>
                 <artifactId>javatuples</artifactId>
                 <version>1.2</version>
             </dependency>
+
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
                 <artifactId>jjwt</artifactId>
@@ -281,7 +263,6 @@
                         <executable>false</executable>
                         <!--生成jar包时排出devTools-->
                         <excludeDevtools>true</excludeDevtools>
-                        <!--<mainClass>${start-class}</mainClass>-->
                     </configuration>
                 </plugin>
             </plugins>
@@ -334,17 +315,6 @@
                 <mobileNo>13896177630</mobileNo>
             </properties>
         </developer>
-        <developer>
-            <id>2</id>
-            <name>邱占波</name>
-            <email>qiubo@yiji.com</email>
-            <roles>
-                <role>系统架构师</role>
-            </roles>
-            <properties>
-                <mobileNo>18580039996</mobileNo>
-            </properties>
-        </developer>
     </developers>
 
     <profiles>
@@ -357,16 +327,12 @@
                 <repository>
                     <id>acooly-releases</id>
                     <name>acooly Internal Releases</name>
-                    <url>
-                        http://acooly.cn/nexus/content/repositories/releases/
-                    </url>
+                    <url>http://acooly.cn/nexus/content/repositories/releases/</url>
                 </repository>
                 <snapshotRepository>
                     <id>acooly-snapshots</id>
                     <name>acooly Internal snapshot</name>
-                    <url>
-                        http://acooly.cn/nexus/content/repositories/snapshots/
-                    </url>
+                    <url>http://acooly.cn/nexus/content/repositories/snapshots/</url>
                 </snapshotRepository>
             </distributionManagement>
             <build>
