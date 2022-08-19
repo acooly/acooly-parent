@@ -27,16 +27,14 @@
         <maven_findbugs_version>2.5.2</maven_findbugs_version>
         <maven_pmd_version>2.7</maven_pmd_version>
 
-        <commons-validator.version>1.4.1</commons-validator.version>
-        <commons.logging.version>1.2</commons.logging.version>
         <shiro.version>1.7.0</shiro.version>
         <fastjson.version>1.2.80</fastjson.version>
+        <!-- 修复log4jBUG漏洞 -->
+        <log4j2.version>2.15.0-rc2</log4j2.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-
-
             <!-- AOP begin -->
             <dependency>
                 <groupId>cglib</groupId>
