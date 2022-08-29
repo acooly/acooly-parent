@@ -6,6 +6,12 @@ acooly框架统一父pom文件。
 
 # 版本记录
 
+## v6.0.0-SNAPSHOT
+
+* 升级为V6版本，统一支持springcloud基础体系依赖
+* 优化排除不需要的依赖配置
+* 调整GroupId为`cn.acooly`
+
 ## v3.1.0-SNAPSHOT
 acooly框架较大功能升级，整合兼容freemarker+jsp作为自适应兼容视图层解决方案，所有组件可封装视图到组件jar包中。
 
