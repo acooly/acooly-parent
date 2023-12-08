@@ -7,6 +7,10 @@ Acooly框架统一父pom文件，核心组件最新版本也由parent统一管�
 
 # 版本记录
 
+## v5.2.0-SNAPSHOT.20231208
+
+* 升级部署的nexus仓库地址为nexus3.x的新地址
+
 ## v5.2.0-SNAPSHOT
 
 * JDK版本及编译：1.8
@@ -23,6 +27,7 @@ Acooly框架统一父pom文件，核心组件最新版本也由parent统一管�
 * Spring Boot版本：1.5.1.RELEASE
 
 ## v3.1.0-SNAPSHOT
+
 acooly框架较大功能升级，整合兼容freemarker+jsp作为自适应兼容视图层解决方案，所有组件可封装视图到组件jar包中。
 
 > 所有组件只要是3.1.x版本的即规划为已封装视图到组件中。
@@ -49,6 +54,6 @@ acooly框架较大功能升级，整合兼容freemarker+jsp作为自适应兼容
 * 2015-09-17: 升级app组件为v1.0.2
 * 2015-09-26: 升级core为v3.0.4
 
-
 ## v3.0.0
+
 升级所有的依赖有parent统一使用manage管理；核心组件最新版本也由parent统一管理。
