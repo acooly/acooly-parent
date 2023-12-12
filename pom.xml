@@ -333,13 +333,13 @@
             <distributionManagement>
                 <repository>
                     <id>acooly-releases</id>
-                    <name>Acooly Internal Releases</name>
-                    <url>http://nexus.acooly.cn/repository/releases/</url>
+                    <name>acooly Internal Releases</name>
+                    <url>http://acooly.cn/nexus/content/repositories/releases/</url>
                 </repository>
                 <snapshotRepository>
                     <id>acooly-snapshots</id>
                     <name>acooly Internal snapshot</name>
-                    <url>http://nexus.acooly.cn/repository/snapshots/</url>
+                    <url>http://acooly.cn/nexus/content/repositories/snapshots/</url>
                 </snapshotRepository>
             </distributionManagement>
             <build>
