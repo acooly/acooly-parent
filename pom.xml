@@ -28,7 +28,8 @@
         <maven_pmd_version>2.7</maven_pmd_version>
 
         <shiro.version>1.7.0</shiro.version>
-        <fastjson.version>1.2.80</fastjson.version>
+        <!-- from 1.2.80 to 1.2.83 for 'CWE-502 - Deserialization of Untrusted Data' -->
+        <fastjson.version>1.2.83</fastjson.version>
         <!-- 修复log4jBUG漏洞 -->
         <log4j2.version>2.15.0-rc2</log4j2.version>
     </properties>
