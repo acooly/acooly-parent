@@ -27,11 +27,14 @@
         <maven_findbugs_version>2.5.2</maven_findbugs_version>
         <maven_pmd_version>2.7</maven_pmd_version>
 
-        <shiro.version>1.7.0</shiro.version>
-        <!-- from 1.2.80 to 1.2.83 for 'CWE-502 - Deserialization of Untrusted Data' -->
-        <fastjson.version>1.2.83</fastjson.version>
         <!-- 修复log4jBUG漏洞 -->
         <log4j2.version>2.15.0-rc2</log4j2.version>
+
+        <shiro.version>1.7.0</shiro.version>
+        <!-- 20240330: from 1.2.80 to 1.2.83 for 'CWE-502 - Deserialization of Untrusted Data' -->
+        <fastjson.version>1.2.83</fastjson.version>
+        <!-- 20240330: from 8.0.25(springboot-2.3.12) to 8.0.33 for 'CVE-2022-21363' and 'CVE-2021-2471' -->
+        <mysql.version>8.0.33</mysql.version>
     </properties>
 
     <dependencyManagement>
