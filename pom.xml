@@ -9,7 +9,7 @@
 
     <groupId>com.acooly</groupId>
     <artifactId>acooly-parent</artifactId>
-    <version>5.2.0-202402_YS_RC1</version>
+    <version>5.2.0</version>
     <packaging>pom</packaging>
 
     <name>acooly-parent</name>
@@ -311,7 +311,7 @@
 
     <organization>
         <name>Acooly</name>
-        <url>https://www.acooly.cn</url>
+        <url>https://acooly.com</url>
     </organization>
 
     <developers>
@@ -329,6 +329,7 @@
     </developers>
 
     <profiles>
+        <!-- 注意：如果需要发布自己私有的版本，请在子项目中覆盖该`distributionManagement` 配置 -->
         <profile>
             <id>acooly</id>
             <activation>
@@ -336,12 +337,12 @@
             </activation>
             <distributionManagement>
                 <repository>
-                    <id>ys-releases</id>
+                    <id>acooly-releases</id>
                     <name>Acooly Internal Releases</name>
                     <url>http://nexus.acooly.cn/repository/releases/</url>
                 </repository>
                 <snapshotRepository>
-                    <id>ys-snapshots</id>
+                    <id>acooly-snapshots</id>
                     <name>acooly Internal snapshot</name>
                     <url>http://nexus.acooly.cn/repository/snapshots/</url>
                 </snapshotRepository>
