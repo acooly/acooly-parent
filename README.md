@@ -148,6 +148,12 @@ mvn -T 1C clean deploy -P acooly -Dmaven.test.skip=true -Dopt=deploy -s /Users/z
 
 # 版本记录
 
+## v5.2.0
+
+2024-05-13
+
+* 分支5.2.0版本，准备发布release版本，专用于对外项目的发布。
+
 ## v5.2.0-SNAPSHOT.20231208
 
 * 升级部署的nexus仓库地址为nexus3.x的新地址
