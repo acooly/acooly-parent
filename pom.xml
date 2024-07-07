@@ -307,19 +307,6 @@
                 <version>2.5</version>
             </plugin>
         </plugins>
-
-        <!-- 打包资源定义 -->
-        <resources>
-            <resource>
-                <directory>.</directory>
-<!--                <includes>-->
-                <!--                    <include>*.md</include>-->
-                <!--                </includes>-->
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-            </resource>
-        </resources>
     </build>
 
     <organization>
