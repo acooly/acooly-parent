@@ -307,6 +307,19 @@
                 <version>2.5</version>
             </plugin>
         </plugins>
+
+        <!-- 打包资源定义 -->
+        <resources>
+            <resource>
+                <directory>.</directory>
+<!--                <includes>-->
+                <!--                    <include>*.md</include>-->
+                <!--                </includes>-->
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
     </build>
 
     <organization>
@@ -314,17 +327,18 @@
         <url>https://acooly.com</url>
     </organization>
 
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/license/MIT</url>
+        </license>
+    </licenses>
+
     <developers>
         <developer>
             <id>1</id>
-            <name>张浦</name>
-            <email>zpuser@gmail.com</email>
-            <roles>
-                <role>系统架构师</role>
-            </roles>
-            <properties>
-                <mobileNo>13896177630</mobileNo>
-            </properties>
+            <name>acooly</name>
+            <email>acooly@gmail.com</email>
         </developer>
     </developers>
 
