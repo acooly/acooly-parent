@@ -42,7 +42,7 @@
                 <pluginRepository>
                     <id>ys-maven-plugin-repos</id>
                     <name>Maven ys plugin repos</name>
-                    <url>${neuxs_url}/repository/public/</url>
+                    <url>${neuxs3_url}/repository/public/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -57,7 +57,7 @@
                 <repository>
                     <id>ys-maven-dep-repos</id>
                     <name>Maven ys dep repos</name>
-                    <url>http://nexus.acooly.cn/repository/public/</url>
+                    <url>${neuxs3_url}/repository/public/</url>
                     <releases>
                         <enabled>true</enabled>
                         <updatePolicy>always</updatePolicy>
@@ -73,6 +73,7 @@
         </profile>
 
         <profile>
+            <!-- 国内推荐aliyun仓库，其他地区就默认中央仓库就OK -->
             <id>aliyun</id>
             <repositories>
                 <repository>
